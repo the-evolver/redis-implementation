@@ -53,7 +53,7 @@ src/
 Ensure Java & Maven are installed.
 
 ```bash
-./your_program.sh
+./the_evolver_program.sh (example)
 ```
 
 ---
