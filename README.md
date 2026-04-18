@@ -1,34 +1,97 @@
-[![progress-banner](https://backend.codecrafters.io/progress/redis/db53c8a1-d075-4603-b6f7-9d5c9670b987)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# 🚀 Redis Clone in Java
 
-This is a starting point for Java solutions to the
-["Build Your Own Redis" Challenge](https://codecrafters.io/challenges/redis).
+A minimal, from-scratch implementation of a Redis-like in-memory key-value store built using Java.
 
-In this challenge, you'll build a toy Redis clone that's capable of handling
-basic commands like `PING`, `SET` and `GET`. Along the way we'll learn about
-event loops, the Redis protocol and more.
+---
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+## 📌 Overview
 
-# Passing the first stage
+This project is a deep dive into how Redis works internally. Instead of treating Redis as a black box, this implementation focuses on:
 
-The entry point for your Redis implementation is in `src/main/java/Main.java`.
-Study and uncomment the relevant code, and push your changes to pass the first
-stage:
+- TCP server fundamentals
+- Event-driven architecture
+- Redis Serialization Protocol (RESP)
+- In-memory data storage
 
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
+The goal is to understand backend systems from first principles.
+
+---
+
+## ⚙️ Features
+
+- ✅ Basic TCP server
+- ✅ RESP command parsing
+- ✅ `PING` command
+- ✅ `SET` & `GET` operations
+- 🚧 Concurrent client handling (in progress)
+- 🚧 Expiry & persistence (planned)
+
+---
+
+## 🧠 Key Learnings
+
+- Socket programming & networking
+- Protocol design (RESP)
+- Concurrency basics
+- Efficient in-memory data handling
+
+---
+
+## 🏗️ Project Structure
+
+```
+src/
+ └── main/
+     └── java/
+         └── Main.java
 ```
 
-That's all!
+---
 
-# Stage 2 & beyond
+## ▶️ Running the Project
 
-Note: This section is for stages 2 and beyond.
+Ensure Java & Maven are installed.
 
-1. Ensure you have `mvn` installed locally
-1. Run `./your_program.sh` to run your Redis server, which is implemented in
-   `src/main/java/Main.java`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+```bash
+./your_program.sh
+```
+
+---
+
+## 🧪 Example Usage
+
+Connect using:
+
+```bash
+redis-cli
+```
+
+Then run:
+
+```
+PING
+SET key value
+GET key
+```
+
+---
+
+## 🎯 Why This Project
+
+Most developers use Redis, but few understand how it works internally.  
+This project focuses on building that understanding from scratch.
+
+---
+
+## 📌 Future Improvements
+
+- Event loop (non-blocking I/O)
+- Persistence (RDB/AOF)
+- More Redis commands
+- Performance optimizations
+
+---
+
+## 🙌 Acknowledgment
+
+Inspired by hands-on system design and low-level backend challenges.
